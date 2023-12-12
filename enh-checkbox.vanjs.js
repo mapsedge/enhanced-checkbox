@@ -1,6 +1,6 @@
 ;
 HTMLElement.prototype.enhanced_checkbox = function (options) {
-const el = this;
+	const el = this;
 	
 	const name 	    = el.getAttribute('name');
 	const id 	      = el.getAttribute('id');
@@ -16,8 +16,8 @@ const el = this;
 		control: 'hidden'
 	};
 	
-// Merge default options with provided options
-const mergedOptions = { ...defaultOptions, ...options };
+	// Merge default options with provided options
+	const mergedOptions = { ...defaultOptions, ...options };
 
 	// Access the options
 	const {
