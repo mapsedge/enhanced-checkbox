@@ -1,3 +1,5 @@
+#work-in-progress
+
 # enhanced-checkbox
 A checkbox that returns a value even when it's not checked!
 
@@ -7,28 +9,34 @@ This plug-in, written in vanilla javascript, transfers the behaviors of the chec
 
 This example uses a custom HTML element, but it could just as easily apply to any other HTML element.
 
-USAGE
+<h2>USAGE</h2>
 
-SCRIPT
-
+<h3>SCRIPT</h3>
+<pre style="font-family: monospace">
 var els = document.querySelectorAll('enh-checkbox');
 els.forEach(el => {
 	el.enhanced_checkbox({
 			before_render: function () {
-				// console.log('Custom after_render function');
+				// optional
 			},
 			after_render: function () {
-				// console.log('Custom after_render function');
+				// optional
 			},
-     control: "hidden"
+     			control: "hidden", // default
+			checked: 1, // default
+			unchecked: 0, // default
 		});
 });
+</pre>
+<h3>HTML</h3>
 
-HTML
+<pre style="font-family: monospace">
+&lt;enh-checkbox name="pizza" value="1" title="bring on the cheese!" class="red-sauce" checked>&lt;/enh-checkbox>
+</pre>
 
-<enh-checkbox name="pizza" value="pepperoni" title="bring on the cheese!" class="red-sauce"></enh-checkbox>
+<h3>OUTPUT</h3>
 
-OUTPUT
-
+<pre style="font-family: monospace">
 <input type="checkbox" name="checkbox_u97bsi" title="bring on the cheese!"  class="red-sauce">
-<input type="hidden" name="pizza" id="pizza" value="pepperoni">
+<input type="hidden" name="pizza" id="pizza" value="1">
+</pre>
