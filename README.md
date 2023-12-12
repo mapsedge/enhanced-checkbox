@@ -9,7 +9,7 @@ This plug-in, written in vanilla javascript, transfers the behaviors of the chec
 
 This example uses a custom HTML element, but it could just as easily apply to any other HTML element.
 
-Options control, checked, and unchecked can be passed through the options object in the function call, or set as attributes on the target control. If both are present, the attributes win.
+Options *control*, *checked*, and *unchecked* can be passed through the options object in the function call, or set as attributes on the target control. If both are present, the attributes win.
 
 <h2>USAGE</h2>
 
@@ -33,12 +33,15 @@ els.forEach(el => {
 <h3>HTML</h3>
 
 <pre style="font-family: monospace">
-&lt;enh-checkbox name="lunch" value="pizza" title="bring on the cheese!" class="red-sauce" checked="pizza" unchecked="burgers" control="text">&lt;/enh-checkbox>
+&lt;!-- The checkbox will be checked if the checked attribute equals the value attribute -->
+&lt;enh-checkbox name="lunch" value="pizza" title="bring on the cheese!" class="red-sauce" 
+	checked="pizza" unchecked="burgers" 
+	control="text">&lt;/enh-checkbox>
 </pre>
 
 <h3>OUTPUT</h3>
 
 <pre style="font-family: monospace">
-<input type="checkbox" name="checkbox_something_random" title="bring on the cheese!"  class="red-sauce">
-<input type="hidden" name="lunch" id="lunch" value="1">
+&lt;input type="checkbox" name="checkbox_something_random" title="bring on the cheese!"  class="red-sauce">
+&lt;input type="text" name="lunch" id="lunch" value="pizza">
 </pre>
